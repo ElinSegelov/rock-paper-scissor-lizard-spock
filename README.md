@@ -2,7 +2,7 @@
 
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). 
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH).
 
 ## Table of contents
 
@@ -17,12 +17,11 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-
 ## Overview
 
 ### The challenge
 
-The challenge was to build a this Rock, Paper, Scissors game and get it looking as close to the design as possible. Assets to build Sheldon Cooper elaborated version: Rock, paper, scissors, lizard, Spock, was provided so i decided to skip the standard game and do the elaboratet one.
+The challenge was to build a this Rock, Paper, Scissors game and get it looking as close to the design as possible. Assets to build Sheldon Cooper elaborated version: Rock, paper, scissors, lizard, Spock, was provided so I decided to skip the standard game and do the elaboratet one.
 
 The istruction were the following:
 
@@ -37,12 +36,12 @@ The istruction were the following:
 
 ![Screenshot of gameboard in mobile view](./design/screenshot-mobile.png)
 
-
 ### Links
 
 - Live Site URL: (https://rpslses.netlify.app/)
 
 ## My process
+
 I decided to use this challenge to try out TailwindCSS and the React hook useContext. I finished the mobile view before starting on the desktop styles and then I made some adjustments for the styling to look good all the way to the desktop break point.
 
 ### Built with
@@ -57,7 +56,6 @@ I decided to use this challenge to try out TailwindCSS and the React hook useCon
 My biggest take-aways from this challenge is getting aquainted with TailwindCSS. I see the potential of it, especially when custom styles are pre-defined but for this chellenge it got somewhat tiresome adding custom sizes and spacings in order to match the design. It is very easy to get into though as the TailwindCSS website provides great documentation.
 
 Trying out useContext for the first time i realized it is much less boilerplate code than Redux to getting started using global states. I've read that there are pros to using Redux in larger apps, but for just managing some variables globally using useContext was smooth.
-
 
 ```Component for the different choices
 export const ChoiceImage = (choice) => {
@@ -78,6 +76,7 @@ export const ChoiceImage = (choice) => {
   )
 }
 ```
+
 ```Logic to determine the winner
 if (playersChoice === computersChoice) setResult('tie')
     else if (
@@ -89,7 +88,8 @@ if (playersChoice === computersChoice) setResult('tie')
     ) setResult('win')
     else setResult('lose')
 ```
-```
+
+````
 const handleSelection = (value) => {
     const random = Math.floor(Math.random() * 5)
     setComputersChoice(possibleChoices[random])
@@ -108,10 +108,11 @@ To further development it would be nice to add the possiblity for the player to 
 
 - [TailwindCSS domumentation](https://tailwindcss.com/) - This domumentation was very helpful as you can just search for the CSS selector or property to see how to use it.
 
-- [Free Code Camps guide to React Context ](https://www.freecodecamp.org/news/react-context-for-beginners/) - Great guide to react Context that I will be referencing again. 
+- [Free Code Camps guide to React Context ](https://www.freecodecamp.org/news/react-context-for-beginners/) - Great guide to react Context that I will be referencing again.
 
 
 ## Author
 
 - Website - [Elin Segelöv](https://elinsegelov.netlify.app/)
 
+````
