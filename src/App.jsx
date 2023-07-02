@@ -4,8 +4,8 @@ import { useState } from 'react';
 import Gameboard from "./components/Gameboard"
 import Header from "./components/Header"
 import RulesButton from "./components/RulesButton"
-import ConclutionScreen from "./components/conclutionScreen";
 import { ComputersChoiceContext, PlayerChoiceContext, ScoreContext } from "./Helper/Context";
+import ConclutionScreen from "./components/conclutionScreen";
 
 const App = () => {
 
