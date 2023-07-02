@@ -1,6 +1,7 @@
 # Frontend Mentor - Rock, Paper, Scissors solution
 
-This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). 
 
 ## Table of contents
 
@@ -14,15 +15,15 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### The challenge
 
-Users should be able to:
+The challenge was to build a this Rock, Paper, Scissors game and get it looking as close to the design as possible. Assets to build Sheldon Cooper elaborated version: Rock, paper, scissors, lizard, Spock, was provided so i decided to skip the standard game and do the elaboratet one.
+
+The istruction were the following:
 
 - View the optimal layout for the game depending on their device's screen size
 - Play Rock, Paper, Scissors against the computer
@@ -31,83 +32,85 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Screenshot of conclutionScrenn in desktop view](./design/sceenshot-desktop.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Screenshot of gameboard in mobile view](./design/sceenshot-mobile.jpg)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://rpslses.netlify.app/)
 
 ## My process
+I decided to use this challenge to try out TailwindCSS and the React hook useContext. I finished the mobile view before starting on the desktop styles and then I made some adjustments for the styling to look good all the way to the desktop break point.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [TailwindCSS](https://tailwindcss.com/) - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+My biggest take-aways from this challenge is getting aquainted with TailwindCSS. I see the potential of it, especially when custom styles are pre-defined but for this chellenge it got somewhat tiresome adding custom sizes and spacings in order to match the design. It is very easy to get into though as the TailwindCSS website provides great documentation.
 
-To see how you can add code snippets, see below:
+Trying out useContext for the first time i realized it is much less boilerplate code than Redux to getting started using global states. I've read that there are pros to using Redux in larger apps, but for just managing some variables globally using useContext was smooth.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
+
+```Component for the different choices
+export const ChoiceImage = (choice) => {
+  let chosenImage;
+
+  if (choice.choice === 'rock') chosenImage = rock;
+  else if (choice.choice === 'paper') chosenImage = paper;
+  else if (choice.choice === 'scissors') chosenImage = scissors;
+  else if (choice.choice === 'lizard') chosenImage = lizard;
+  else if (choice.choice === 'spock') chosenImage = spock;
+
+  return(
+    <div className={`flex items-center content-center w-32 h-32 p-4 m-auto rounded-full bg-gradient-radial from-${choice.choice}1 to-${choice.choice}2 shadow-${choice.choice} relative z-10 lg:w-48 lg:h-48 lg:p-5`}>
+      <div className='flex items-center justify-center bg-white rounded-full w-full h-full shadow-inside'>
+        <img className='m-2 w-2.5rem h-2.5rem lg:w-20 lg:h-auto' src={chosenImage} alt={choice.choice} />
+      </div>
+    </div>
+  )
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```Logic to determine the winner
+if (playersChoice === computersChoice) setResult('tie')
+    else if (
+      (playersChoice === 'rock' && (computersChoice === 'scissors' || computersChoice === 'lizard')) ||
+      (playersChoice === 'paper' && (computersChoice === 'rock' || computersChoice === 'spock')) ||
+      (playersChoice === 'scissors' && (computersChoice === 'paper' || computersChoice === 'lizard')) ||
+      (playersChoice === 'lizard' && (computersChoice === 'paper' || computersChoice === 'spock')) ||
+      (playersChoice === 'spock' && (computersChoice === 'rock' || computersChoice === 'scissors'))
+    ) setResult('win')
+    else setResult('lose')
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```
+const handleSelection = (value) => {
+    const random = Math.floor(Math.random() * 5)
+    setComputersChoice(possibleChoices[random])
+    setPlayersChoice(value);
+    navigate('/conclution')
+  }```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+For refining the project I could refactor the Boargame component to import the generic ```choiceImage``` instead of repeating alot of code. I started doing it but ran in to some trouble with sizing.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+To further development it would be nice to add the possiblity for the player to choose between playing the standard or the elaborated game.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [TailwindCSS domumentation](https://tailwindcss.com/) - This domumentation was very helpful as you can just search for the CSS selector or property to see how to use it.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Free Code Camps guide to React Context ](https://www.freecodecamp.org/news/react-context-for-beginners/) - Great guide to react Context that I will be referencing again. 
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Elin Segelöv](https://elinsegelov.netlify.app/)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
