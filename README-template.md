@@ -1,6 +1,7 @@
 # Frontend Mentor - Rock, Paper, Scissors solution
 
 ![Design preview for the Rock, Paper, Scissors coding challenge](./design/desktop-preview.jpg)
+
 This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH). 
 
 ## Table of contents
@@ -32,9 +33,9 @@ The istruction were the following:
 
 ### Screenshot
 
-![Screenshot of conclutionScrenn in desktop view](./design/sceenshot-desktop.jpg)
+![Screenshot of conclutionScrenn in desktop view](./design/sceenshot-desktop.png)
 
-![Screenshot of gameboard in mobile view](./design/sceenshot-mobile.jpg)
+![Screenshot of gameboard in mobile view](./design/sceenshot-mobile.png)
 
 
 ### Links
