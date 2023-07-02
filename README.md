@@ -89,7 +89,7 @@ if (playersChoice === computersChoice) setResult('tie')
     else setResult('lose')
 ```
 
-````
+```
 const handleSelection = (value) => {
     const random = Math.floor(Math.random() * 5)
     setComputersChoice(possibleChoices[random])
