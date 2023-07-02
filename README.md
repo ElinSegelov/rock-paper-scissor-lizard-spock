@@ -95,7 +95,8 @@ const handleSelection = (value) => {
     setComputersChoice(possibleChoices[random])
     setPlayersChoice(value);
     navigate('/conclution')
-  }```
+  }
+```
 
 ### Continued development
 
@@ -115,4 +116,4 @@ To further development it would be nice to add the possiblity for the player to 
 
 - Website - [Elin Segelöv](https://elinsegelov.netlify.app/)
 
-````
+
