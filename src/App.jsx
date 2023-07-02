@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useState } from 'react';
 import Gameboard from "./components/Gameboard"
+import ConclutionScreen from "./components/ConclutionScreen";
 import Header from "./components/Header"
 import RulesButton from "./components/RulesButton"
 import { ComputersChoiceContext, PlayerChoiceContext, ScoreContext } from "./Helper/Context";
-import ConclutionScreen from "./components/conclutionScreen.jsx";
 
 const App = () => {
 
