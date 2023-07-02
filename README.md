@@ -57,6 +57,7 @@ My biggest take-aways from this challenge is getting aquainted with TailwindCSS.
 
 Trying out useContext for the first time i realized it is much less boilerplate code than Redux to getting started using global states. I've read that there are pros to using Redux in larger apps, but for just managing some variables globally using useContext was smooth.
 
+Component for the different choices
 ```Component for the different choices
 export const ChoiceImage = (choice) => {
   let chosenImage;
@@ -77,6 +78,7 @@ export const ChoiceImage = (choice) => {
 }
 ```
 
+Logic to determine the winner
 ```Logic to determine the winner
 if (playersChoice === computersChoice) setResult('tie')
     else if (
