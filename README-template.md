@@ -35,7 +35,7 @@ The istruction were the following:
 
 ![Screenshot of conclutionScrenn in desktop view](./design/screenshot-desktop.png)
 
-![Screenshot of gameboard in mobile view](./design/sceenshot-mobile.png)
+![Screenshot of gameboard in mobile view](./design/screenshot-mobile.png)
 
 
 ### Links
