@@ -18,7 +18,7 @@ export default {
       boxShadow: {
         'inside': 'inset 0px 8px 1px 1px rgb(189, 186, 186)',
         'lizard': '0px 8px 1px 1px hsl(261, 73%, 52%)',
-        'paper': '0px 8px 1px 21x hsl(230, 89%, 54%)',
+        'paper': '0px 8px 1px 1px hsl(230, 89%, 54%)',
         'rock': '0px 8px 1px 1px hsl(349, 71%, 44%)',
         'scissors': '0px 8px 1px 1px hsl(39, 89%, 41%)',
         'spock': '0px 8px 1px 1px hsl(189, 59%, 45%)'

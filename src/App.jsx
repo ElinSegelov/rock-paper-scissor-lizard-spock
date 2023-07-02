@@ -7,7 +7,6 @@ import RulesButton from "./components/RulesButton"
 import { ComputersChoiceContext, PlayerChoiceContext, ScoreContext } from "./Helper/Context";
 
 const App = () => {
-
   const [playersChoice, setPlayersChoice] = useState('')
   const [computersChoice, setComputersChoice] = useState('')
   const [score, setScore] = useState(0)

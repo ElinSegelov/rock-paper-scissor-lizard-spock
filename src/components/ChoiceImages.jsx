@@ -5,7 +5,6 @@ import lizard from '../assets/images/icon-lizard.svg';
 import spock from '../assets/images/icon-spock.svg';
 
 export const ChoiceImage = (choice) => {
-//! For some reason the outside shadow did work except for with paper and scissors, now it doesn't work for any choice
   let chosenImage;
 
   if (choice.choice === 'rock') chosenImage = rock;
