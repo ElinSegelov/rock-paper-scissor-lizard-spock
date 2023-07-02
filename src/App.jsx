@@ -1,11 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { useState } from 'react';
-//import Footer from "./components/Footer"
 import Gameboard from "./components/Gameboard"
 import Header from "./components/Header"
 import RulesButton from "./components/RulesButton"
 import { ComputersChoiceContext, PlayerChoiceContext, ScoreContext } from "./Helper/Context";
-import ConclutionScreen from "./components/conclutionScreen";
+import ConclutionScreen from "./components/conclutionScreen.jsx";
 
 const App = () => {
 
@@ -28,7 +27,6 @@ const App = () => {
             <RulesButton />
           </main>
         </section>
-        {/* <Footer /> */}
       </ScoreContext.Provider>
       </ComputersChoiceContext.Provider>
       </PlayerChoiceContext.Provider>

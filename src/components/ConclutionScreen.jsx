@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { ComputersChoiceContext, PlayerChoiceContext, ScoreContext } from '../Helper/Context';
 import { ChoiceImage } from './ChoiceImages';
 import { useNavigate } from 'react-router-dom';
@@ -42,8 +41,7 @@ const ConclutionScreen = () => {
   else if (computersChoice === 'lizard') computersPick = <ChoiceImage choice='lizard' />
   else if (computersChoice === 'spock') computersPick = <ChoiceImage choice='spock' />
   
-/*   if (playersChoice === 'rock') playersPick = <Rock />
- */  if (playersChoice === 'rock') playersPick = <ChoiceImage choice='rock' />
+  if (playersChoice === 'rock') playersPick = <ChoiceImage choice='rock' />
   else if (playersChoice === 'paper') playersPick = <ChoiceImage choice='paper' />
   else if (playersChoice === 'scissors') playersPick = <ChoiceImage choice='scissors' />
   else if (playersChoice === 'lizard') playersPick = <ChoiceImage choice='lizard' />
@@ -94,7 +92,6 @@ const ConclutionScreen = () => {
             <p id='computerPick' className=' uppercase text-center text-white my-6'>The House picked</p>
         </div>
       </div>
-      {/*<div className='w-10rem h-10rem shadow-big rounded-full'></div>*/}
     </div>
   )
 }

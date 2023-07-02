@@ -16,13 +16,12 @@ export default {
         '60': '60%'
       },
       boxShadow: {
-        'big': '0 0 0 2rem rgba(255, 255, 255, 0.8)',
         'inside': 'inset 0px 8px 1px 1px rgb(189, 186, 186)',
-        'outsidelizard': '0px 8px 1px 1px hsl(261, 73%, 52%)',
-        'outsidepaper': '0px 8px 1px 21x hsl(230, 89%, 54%)',
-        'outsiderock': '0px 8px 1px 1px hsl(349, 71%, 44%)',
-        'outsidescissors': '0px 8px 1px 1px hsl(39, 89%, 41%)',
-        'outsidespock': '0px 8px 1px 1px hsl(189, 59%, 45%)'
+        'lizard': '0px 8px 1px 1px hsl(261, 73%, 52%)',
+        'paper': '0px 8px 1px 21x hsl(230, 89%, 54%)',
+        'rock': '0px 8px 1px 1px hsl(349, 71%, 44%)',
+        'scissors': '0px 8px 1px 1px hsl(39, 89%, 41%)',
+        'spock': '0px 8px 1px 1px hsl(189, 59%, 45%)'
       },
       colors: {
         'lighterBlue': 'hsl(214, 47%, 23%)',

@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import rules from '../assets/images/image-rules-bonus.svg';
 import close from '../assets/images/icon-close.svg'
 

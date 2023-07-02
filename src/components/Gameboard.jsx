@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { useContext, useState } from 'react';
+
+import { useContext } from 'react';
 import rock from '../assets/images/icon-rock.svg';
 import paper from '../assets/images/icon-paper.svg';
 import scissors from '../assets/images/icon-scissors.svg';
@@ -9,13 +9,10 @@ import pentagon from '../assets/images/bg-pentagon.svg'
 import { useNavigate } from 'react-router-dom';
 import { ComputersChoiceContext, PlayerChoiceContext } from '../Helper/Context';
 
-
-
 const Gameboard = () => {
   const {setPlayersChoice} = useContext(PlayerChoiceContext);
   const {setComputersChoice} = useContext(ComputersChoiceContext);
   const possibleChoices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-
   const navigate = useNavigate();
   
   const handleSelection = (value) => {
@@ -24,6 +21,7 @@ const Gameboard = () => {
     setPlayersChoice(value);
     navigate('/conclution')
   }
+
   // Possible improvement: import ChoiceImages instead.
   return (
     <section className='relative flex py-16 mx-12 mb-8 w-17.5rem bg-60 self-center lg:my-8'>

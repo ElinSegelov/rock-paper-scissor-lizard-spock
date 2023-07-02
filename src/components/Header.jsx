@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import logo from '../assets/images/logo-bonus.svg'
 import { ScoreContext } from '../Helper/Context';
 
