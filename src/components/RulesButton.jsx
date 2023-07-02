@@ -14,7 +14,7 @@ const RulesButton = () => {
   return (
     <>
     {displayRules && 
-    <article className='absolute top-0 flex flex-col items-center justify-around w-screen h-screen p-8 bg-white lg:w-25rem lg:h-30rem lg:rounded-lg lg:left-screenCenterWidthRules lg:top-screenCenterHeightRules lg:block'>
+    <article className='absolute top-0 flex flex-col items-center justify-around w-screen h-screen p-8 bg-white z-20 lg:w-25rem lg:h-30rem lg:rounded-lg lg:left-screenCenterWidthRules lg:top-screenCenterHeightRules lg:block'>
       <h1 className='text-3xl font-bold uppercase'>Rules</h1>
       <img className='lg:my-6' src={rules}
         alt='Rules: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.' />

@@ -24,7 +24,7 @@ const Gameboard = () => {
     setPlayersChoice(value);
     navigate('/conclution')
   }
-  //! Importera ChoiceImages istället. Lägg yttre lagret av respektive som en div och importera dem i en knapp
+  // Possible improvement: import ChoiceImages instead.
   return (
     <section className='relative flex py-16 mx-12 mb-8 w-17.5rem bg-60 self-center lg:my-8'>
       <button 
