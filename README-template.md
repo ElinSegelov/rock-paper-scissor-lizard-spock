@@ -33,7 +33,7 @@ The istruction were the following:
 
 ### Screenshot
 
-![Screenshot of conclutionScrenn in desktop view](./design/sceenshot-desktop.png)
+![Screenshot of conclutionScrenn in desktop view](./design/screenshot-desktop.png)
 
 ![Screenshot of gameboard in mobile view](./design/sceenshot-mobile.png)
 
