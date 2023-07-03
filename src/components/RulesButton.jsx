@@ -22,7 +22,7 @@ const RulesButton = () => {
       </button>
     </article>}
       <button onClick={() => handleRulesRequest()} type="button"
-        className='self-center px-10 py-2 my-8 text-white uppercase border rounded-lg lg:absolute lg:right-8 bottom-0'>
+        className='self-center px-10 py-2 my-8 text-white uppercase border rounded-lg lg:absolute lg:right-8 bottom-0 lg:hover:scale-105'>
       Rules
     </button> 
   </>

@@ -81,7 +81,7 @@ const ConclutionScreen = () => {
           {showResult && 
           <div className='absolute top-17rem m-auto flex flex-col content-center lg:relative lg:z-10 lg:top-0'>
             <h2 className='uppercase text-5xl text-white'>{resultMessage}</h2>
-            <button className='px-10 py-2 my-6 text-scoreText bg-white uppercase border rounded-lg' onClick={() => navigate('/')} type='button'>Play again</button>
+            <button className='px-10 py-2 my-6 text-scoreText bg-white uppercase border rounded-lg lg:hover:scale-105' onClick={() => navigate('/')} type='button'>Play again</button>
           </div>}
       <div id='computersPick' className='flex flex-col content-center justify-center w-60 h-60 absolute top-resultPosition -right-4 rounded-full lg:relative lg:top-0 lg:right-36 lg:w-35rem lg:h-35rem '>
         <div className='relative top-5 flex flex-col lg:flex-col-reverse lg:-top-6'>
